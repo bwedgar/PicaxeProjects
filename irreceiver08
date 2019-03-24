@@ -1,0 +1,34 @@
+main:
+
+;for 08M2 
+;irin c.1,infra 
+
+;for 08M 
+;infrain2  ;wait for infrared signal
+
+;for 08 
+;needs 4MHz clock 
+;infrain ;wait for infrared signal
+
+
+if infra=1 then redLEDOn
+if infra=2 then greenLEDOn
+if infra=3 then redLEDOff
+if infra=4 then greenLEDOff
+
+
+redLEDOn:
+high 1
+goto main
+
+redLEDOff:
+low 1
+goto main
+
+greenLEDOn:
+high 2
+goto main
+
+greenLEDOff:
+low 2
+goto main
